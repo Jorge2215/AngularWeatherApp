@@ -1,3 +1,31 @@
+# React Weather App
+
+Small React application that uses the Open-Meteo free API to display current temperature, wind speed, wind direction and humidity for a given latitude and longitude.
+
+Quick start
+
+1. Install dependencies:
+
+```
+npm install
+```
+
+2. Start the dev server:
+
+```
+npm start
+```
+
+Notes
+
+- No API key required — the app calls https://api.open-meteo.com directly.
+- The sample coordinates default to Buenos Aires (-34.6037, -58.3816).
+
+New UI features:
+
+- Input validation for latitude and longitude. Latitude must be between -90 and 90; longitude between -180 and 180.
+- A "Use my location" button will populate coordinates using the browser's geolocation API (requires user permission).
+- Wind speed is shown in km/h by default, with an option to toggle to m/s if needed.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
