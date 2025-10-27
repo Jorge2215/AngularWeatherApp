@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import './App.css';
+import WindCompass from './components/WindCompass';
+import MapView from './components/MapView';
 
 function clampNumber(value) {
   if (value === null || value === undefined) return null;
@@ -255,9 +257,18 @@ function App() {
                   'N/A'
                 )}
               </li>
-              <li>Wind direction: {weather.winddirection ?? 'N/A'} °</li>
+              <li>
+                Wind direction: {weather.winddirection ?? 'N/A'} °
+                <div className="compass-container" style={{display: 'inline-block', marginLeft: 12}}>
+                  <WindCompass direction={weather.winddirection ?? 0} size={72} />
+                </div>
+              </li>
               <li>Humidity: {weather.humidity ?? 'N/A'} %</li>
             </ul>
+            {/* Map (Bing Maps) - requires REACT_APP_BING_MAPS_KEY in .env */}
+            <div style={{ marginTop: 12 }}>
+              <MapView latitude={latitude} longitude={longitude} />
+            </div>
           </div>
         )}
 
