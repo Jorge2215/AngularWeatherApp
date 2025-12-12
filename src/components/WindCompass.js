@@ -17,7 +17,7 @@ const WindCompass = ({ direction = 0, size = 120 }) => {
     >
       <circle cx="50" cy="50" r="45" fill="none" stroke="#ccc" strokeWidth="2" />
       <g style={rotationStyle}>
-        <polygon points="50,12 45,52 50,47 55,52" fill="#e53935" stroke="#333" strokeWidth="0.5" />
+        <polygon points="50,12 45,52 50,47 55,52" fill="#2196F3" stroke="#333" strokeWidth="0.5" />
       </g>
       <text x="50" y="20" textAnchor="middle" fill="#ddd" fontSize="8">N</text>
       <text x="78" y="52" textAnchor="middle" fill="#ddd" fontSize="8">E</text>
